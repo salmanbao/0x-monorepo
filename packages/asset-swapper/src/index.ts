@@ -72,6 +72,7 @@ export {
     BalancerFillData,
     CollapsedFill,
     CurveFillData,
+    CurveInfo,
     ERC20BridgeSource,
     FeeSchedule,
     FillData,
