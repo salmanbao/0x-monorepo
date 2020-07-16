@@ -397,7 +397,7 @@ export class MarketOperationUtils {
             feeSchedule: opts.feeSchedule,
         });
         // Find the optimal path.
-        let optimalPath = findOptimalPath(side, paths, inputAmount, opts.runLimit) || [];
+        let optimalPath = findOptimalPath(side, paths, inputAmount) || [];
         if (optimalPath.length === 0) {
             throw new Error(AggregationError.NoOptimalPath);
         }
@@ -407,7 +407,7 @@ export class MarketOperationUtils {
             // We create a fallback path that is exclusive of Native liquidity
             // This is the optimal on-chain path for the entire input amount
             const nonNativePaths = paths.filter(p => p.length > 0 && p[0].source !== ERC20BridgeSource.Native);
-            const nonNativeOptimalPath = findOptimalPath(side, nonNativePaths, inputAmount, opts.runLimit) || [];
+            const nonNativeOptimalPath = findOptimalPath(side, nonNativePaths, inputAmount) || [];
             // Calculate the slippage of on-chain sources compared to the most optimal path
             const fallbackSlippage = getPathAdjustedSlippage(
                 side,

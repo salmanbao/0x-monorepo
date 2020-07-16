@@ -22,7 +22,7 @@ import { DexOrderSampler } from '../src/utils/market_operation_utils/sampler';
 import { DexSample, ERC20BridgeSource, FillData, NativeFillData } from '../src/utils/market_operation_utils/types';
 
 // tslint:disable: custom-no-magic-numbers
-describe('MarketOperationUtils tests', () => {
+describe.only('MarketOperationUtils tests', () => {
     const CHAIN_ID = 1;
     const contractAddresses = { ...getContractAddressesForChainOrThrow(CHAIN_ID), multiBridge: NULL_ADDRESS };
     const ETH2DAI_BRIDGE_ADDRESS = contractAddresses.eth2DaiBridge;
@@ -492,7 +492,7 @@ describe('MarketOperationUtils tests', () => {
                 }
             });
 
-            it('can mix convex sources', async () => {
+            it.only('can mix convex sources', async () => {
                 const rates: RatesBySource = {};
                 rates[ERC20BridgeSource.Native] = [0.4, 0.3, 0.2, 0.1];
                 rates[ERC20BridgeSource.Uniswap] = [0.5, 0.05, 0.05, 0.05];
