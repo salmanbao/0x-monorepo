@@ -5,15 +5,18 @@
  */
 import { ContractArtifact } from 'ethereum-types';
 
+import * as ENSValidator from '../test/generated-artifacts/ENSValidator.json';
 import * as Exchange from '../test/generated-artifacts/Exchange.json';
 import * as IAssetProxy from '../test/generated-artifacts/IAssetProxy.json';
 import * as IAssetProxyDispatcher from '../test/generated-artifacts/IAssetProxyDispatcher.json';
 import * as IEIP1271Data from '../test/generated-artifacts/IEIP1271Data.json';
 import * as IEIP1271Wallet from '../test/generated-artifacts/IEIP1271Wallet.json';
+import * as IENS from '../test/generated-artifacts/IENS.json';
 import * as IExchange from '../test/generated-artifacts/IExchange.json';
 import * as IExchangeCore from '../test/generated-artifacts/IExchangeCore.json';
 import * as IMatchOrders from '../test/generated-artifacts/IMatchOrders.json';
 import * as IProtocolFees from '../test/generated-artifacts/IProtocolFees.json';
+import * as IResolver from '../test/generated-artifacts/IResolver.json';
 import * as ISignatureValidator from '../test/generated-artifacts/ISignatureValidator.json';
 import * as IsolatedExchange from '../test/generated-artifacts/IsolatedExchange.json';
 import * as ITransactions from '../test/generated-artifacts/ITransactions.json';
@@ -64,6 +67,9 @@ export const artifacts = {
     IWallet: IWallet as ContractArtifact,
     IWrapperFunctions: IWrapperFunctions as ContractArtifact,
     LibExchangeRichErrorDecoder: LibExchangeRichErrorDecoder as ContractArtifact,
+    ENSValidator: ENSValidator as ContractArtifact,
+    IENS: IENS as ContractArtifact,
+    IResolver: IResolver as ContractArtifact,
     IsolatedExchange: IsolatedExchange as ContractArtifact,
     ReentrancyTester: ReentrancyTester as ContractArtifact,
     TestAssetProxyDispatcher: TestAssetProxyDispatcher as ContractArtifact,
